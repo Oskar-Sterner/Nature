@@ -1,0 +1,22 @@
+.item1 {
+    grid-area: start;
+    display: grid;
+    height: 100vh;
+}
+
+.item2 {
+    grid-area: team;
+}
+
+.item3 {
+    grid-area: footer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template:
+        'start start start start start start'
+        'team team team team team team'
+        'footer footer footer footer footer footer';
+}

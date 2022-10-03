@@ -1,0 +1,11 @@
+@use "variables" as var;
+@use "mixins";
+
+@include mixins.small-screen {
+    #navbar {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}

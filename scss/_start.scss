@@ -1,0 +1,145 @@
+@use "variables" as var;
+@use "mixins";
+
+#navbar {
+    @include mixins.navbar;
+    a{
+        padding: 0px 50px 0px 0px;
+    }
+}
+
+#hero {
+    background-image: url(../assets/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    i{
+        position: absolute;
+        bottom: 30;
+        left: 50%;
+    }
+}
+
+#hero-text {
+    margin-top: 40vh;
+    h1 {
+        font-size: 38px;
+    }
+    p {
+        font-size: 28px;
+        margin-block-end: 2.2em;
+    }
+}
+
+.hamburger {
+    display: none;
+	width: 100%;
+	box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+	.menu-items {
+        display: flex;
+        background: rgb(255,255,255);
+        background: linear-gradient(0deg, rgba(255,255,255,0.1516981792717087) 0%, rgba(255,255,255,0) 100%);
+        width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+		li {
+			margin-bottom: 1.2rem;
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+	}
+	.nav-container {
+		li {
+			list-style: none;
+		}
+		a {
+			text-decoration: none;
+			color: #ffffff;
+			font-weight: 500;
+			font-size: 1.2rem;
+			padding: 0.7rem;
+			&:hover {
+				font-weight: bolder;
+			}
+		}
+	}
+}
+.nav-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 62px;
+	display: block;
+	position: relative;
+	height: 60px;
+	.checkbox {
+		position: relative;
+		display: block;
+        float: right;
+		height: 32px;
+		width: 32px;
+		top: 20px;
+		right: 20px;
+		z-index: 5;
+		opacity: 0;
+		cursor: pointer;
+	}
+	.hamburger-lines {
+		height: 26px;
+		width: 32px;
+        float: right;
+		position: relative;
+		top: 17px;
+        left: 10px;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+        margin-bottom: 35px;
+		.line {
+			display: block;
+			height: 4px;
+			width: 100%;
+			border-radius: 10px;
+			background: #ffffff;
+		}
+		.line1 {
+			transform-origin: 0% 0%;
+			transition: transform 0.4s ease-in-out;
+		}
+		.line2 {
+			transition: transform 0.2s ease-in-out;
+		}
+		.line3 {
+			transform-origin: 0% 100%;
+			transition: transform 0.4s ease-in-out;
+		}
+	}
+	input[type="checkbox"] {
+		&:checked {
+			~ {
+				.menu-items {
+					transform: translateX(0);
+				}
+				.hamburger-lines {
+					.line1 {
+						transform: rotate(45deg);
+					}
+					.line2 {
+						transform: scaleY(0);
+					}
+					.line3 {
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+	}
+}
