@@ -22,6 +22,12 @@
     text-align: left;
 }
 
+/* Hover Cursor Pointer */
+@mixin pointer {
+    &:hover{
+        cursor: pointer;
+    }
+}
 /* Queries */
 @mixin small-screen {
     @media only screen and (max-width: 400px) {

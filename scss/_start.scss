@@ -1,13 +1,19 @@
 @use "variables" as var;
 @use "mixins";
 
+/* Navbar */
 #navbar {
     @include mixins.navbar;
     a{
-        padding: 0px 50px 0px 0px;
+        margin: 0px 50px 0px 0px;
+		@include mixins.pointer;
+		&:hover{
+			text-decoration: underline;
+		}
     }
 }
 
+/* Hero */
 #hero {
     background-image: url(../assets/hero.jpg);
     background-position: center;
@@ -15,11 +21,12 @@
     background-size: cover;
     text-align: center;
 
-    i{
-        position: absolute;
-        bottom: 30;
-        left: 50%;
-    }
+	#down{
+		position: relative;
+		text-align: center;
+		top: 260px;
+		@include mixins.pointer;
+	}
 }
 
 #hero-text {
@@ -144,17 +151,27 @@
 	}
 }
 
+/* Team */
 #team {
+	color: var.$secondary;
+	margin-bottom: 50px;
+	#down{
+		text-align: center;
+		a{
+			@include mixins.pointer;
+		}
+	}
+	
 	h1{
-		color: var.$secondary;
 		text-align: center;
 		font-size: 40px;
 	}
+		
 	ul{
 		list-style-type: none;
-		column-count: 2;
+		display: grid;
+		grid-template-columns: auto auto;
 		text-align: -webkit-center;
-		color: var.$secondary;
 		font-weight: bold;
 		margin-block-start: 0;
 		margin-block-end: 0;
@@ -188,4 +205,24 @@
 			}
 		}
 	}
+}
+
+/* Footer */
+#footer{
+	display: grid;
+	height: 300px;
+	grid-template-columns: auto auto auto;
+	justify-content: space-around;
+	text-align: left;
+
+	article{
+		margin-top: 60px;
+		p{
+			i{
+				margin-right: 20px;
+			}
+		}
+	}
+	
+	
 }
