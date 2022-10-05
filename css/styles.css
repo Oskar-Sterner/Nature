@@ -70,7 +70,7 @@ a, a:visited, a:hover, a:active {
 #hero #down {
   position: relative;
   text-align: center;
-  top: 260px;
+  top: 170px;
 }
 #hero #down:hover {
   cursor: pointer;
@@ -272,8 +272,8 @@ a, a:visited, a:hover, a:active {
   #team ul {
     grid-template-columns: auto;
   }
-  #hero #down {
-    top: 180px;
+  #hero-text {
+    margin-top: 30vh;
   }
   #footer {
     grid-template-columns: auto;
