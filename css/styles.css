@@ -67,7 +67,7 @@ a, a:visited, a:hover, a:active {
   background-size: cover;
   text-align: center;
 }
-#hero a {
+#hero #down-hero {
   position: absolute;
   left: 50%;
   bottom: 40px;
