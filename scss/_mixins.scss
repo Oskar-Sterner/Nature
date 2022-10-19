@@ -13,7 +13,7 @@
 /* Quote */
 @mixin quote {
     background-color: var.$panel;
-    width: 500px;
+    max-width: 500px;
     height: 100px;
     border-radius: 10px;
     margin-bottom: 40px;
