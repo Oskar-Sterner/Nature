@@ -20,13 +20,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-
-	#down{
-		position: relative;
-		text-align: center;
-		top: 250px;
-		@include mixins.pointer;
-	}
 }
 
 #hero-text {
@@ -38,6 +31,10 @@
         font-size: 28px;
         margin-block-end: 2.2em;
     }
+	a {
+		position: relative;
+		top: 170px;
+	}
 }
 
 .hamburger {

@@ -67,14 +67,6 @@ a, a:visited, a:hover, a:active {
   background-size: cover;
   text-align: center;
 }
-#hero #down {
-  position: relative;
-  text-align: center;
-  top: 250px;
-}
-#hero #down:hover {
-  cursor: pointer;
-}
 
 #hero-text {
   margin-top: 40vh;
@@ -85,6 +77,10 @@ a, a:visited, a:hover, a:active {
 #hero-text p {
   font-size: 28px;
   margin-block-end: 2.2em;
+}
+#hero-text a {
+  position: relative;
+  top: 170px;
 }
 
 .hamburger {
@@ -272,8 +268,23 @@ a, a:visited, a:hover, a:active {
   #team ul {
     grid-template-columns: auto;
   }
+  .item1 {
+    height: 158vh;
+  }
   #hero-text {
-    margin-top: 30vh;
+    margin-top: 45vh;
+  }
+  #hero-text h1 {
+    font-size: 50px;
+  }
+  #hero-text p {
+    font-size: 40px;
+  }
+  #hero-text a {
+    top: 300px;
+  }
+  #hero-text a .fa-solid {
+    font-size: 40px;
   }
   #footer {
     grid-template-columns: auto;

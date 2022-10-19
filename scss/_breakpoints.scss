@@ -16,8 +16,24 @@
         }
     }
 
+    .item1{
+        height: 158vh;
+    }
+
     #hero-text{
-        margin-top: 30vh;
+        margin-top: 45vh;
+        h1{
+            font-size: 50px;
+        }
+        p{
+            font-size: 40px;
+        }
+        a{
+            top: 300px;
+            .fa-solid{
+                font-size: 40px;
+            }
+        }
     }
 
     #footer{
