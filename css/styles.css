@@ -67,6 +67,12 @@ a, a:visited, a:hover, a:active {
   background-size: cover;
   text-align: center;
 }
+#hero a {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translate(-50%, -50%);
+}
 
 #hero-text {
   margin-top: 40vh;
@@ -77,10 +83,6 @@ a, a:visited, a:hover, a:active {
 #hero-text p {
   font-size: 28px;
   margin-block-end: 2.2em;
-}
-#hero-text a {
-  position: relative;
-  top: 170px;
 }
 
 .hamburger {
@@ -281,12 +283,6 @@ a, a:visited, a:hover, a:active {
     font-size: 35px;
   }
   #hero-text p {
-    font-size: 25px;
-  }
-  #hero-text a {
-    top: 180px;
-  }
-  #hero-text a .fa-solid {
     font-size: 25px;
   }
   #footer {
